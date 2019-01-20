@@ -35,8 +35,8 @@ class IPS_MQTT_RFID extends IPSModule
 
             if (property_exists($Buffer, 'TOPIC')) {
                 if (fnmatch('*uid*', $Buffer->TOPIC)) {
-                    $this->SendDebug('Power Topic', $Buffer->TOPIC, 0);
-                    $this->SendDebug('Power Msg', $Buffer->MSG, 0);
+                    $this->SendDebug('Topic', $Buffer->TOPIC, 0);
+                    $this->SendDebug('Msg', $Buffer->MSG, 0);
                     SetValue($this->GetIDForIdent('RFID_UID'), $Buffer->MSG);
                 }
             }
