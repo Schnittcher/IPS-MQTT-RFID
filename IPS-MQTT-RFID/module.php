@@ -12,8 +12,6 @@ class IPS_MQTT_RFID extends IPSModule
 
         $this->RegisterPropertyString('MQTTTopic', '');
         $this->RegisterVariableString('RFID_UID', 'UID', '');
-
-        $this->EnableAction('Shelly_State');
     }
 
     public function ApplyChanges()
